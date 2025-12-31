@@ -247,12 +247,13 @@ rotate();
 function toggleMenu() {
   const menu = document.getElementById("navMenu");
 
-  if (menu.style.display === "none") {
-    menu.style.display = "none";
+  if (menu.style.display === "flex") {
+    menu.style.display = "flex";
   } else {
     menu.style.display = "flex";
   }
 }
+
 
 
 
