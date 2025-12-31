@@ -245,20 +245,15 @@ function rotate() {
 
 rotate();
 function toggleMenu() {
-    const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
+  const menu = document.getElementById("navMenu");
 
   if (menu.style.display === "flex") {
-    menu.style.display = "flex";
+    menu.style.display = "none";
   } else {
     menu.style.display = "flex";
   }
 }
+
 
 
 
