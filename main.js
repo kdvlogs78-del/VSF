@@ -245,24 +245,18 @@ function rotate() {
 
 rotate();
 }
-    const hamburger = document.getElementById("hamburger");
-        const navMenu = document.getElementById("navMenu");
-        const header = document.getElementById("header");
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
 
-        /* Toggle Mobile Menu */
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("show");
-        });
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
 
-        /* Blur Header on Scroll */
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        });
+
+
 
 
 
