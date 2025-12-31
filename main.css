@@ -80,7 +80,34 @@ nav a:hover {
 nav a:hover::after {
     width: 100%;
 }
+/* ☰ Icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 
+/* Mobile View */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* SHOW ☰ */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #6a00ff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+  }
+}
 /* Make <ul> flex for links */
 .nav-links {
     display: flex;
@@ -1096,4 +1123,5 @@ button {
 .reveal.fade-out {
     opacity: 0;
     transform: translateY(-40px);
+
 }
