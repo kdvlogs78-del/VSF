@@ -84,29 +84,26 @@ nav a:hover::after {
 @media (max-width: 768px) {
   
     /* ☰ Icon */
-.hamburger {
-  display: flex;
-  font-size: 28px;
-  cursor: pointer;
-}.hamburger {
-    display:flex;
-     /* SHOW ☰ */
-  }
+.menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: #fff;
+        cursor: pointer;
+    }
+ .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(135deg, #6a00ff, #ff4ecd);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+    }
 
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: #6a00ff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    text-align: center;
-  }
-
-  .nav-links li {
-    padding: 15px 0;
-  }
+  .nav-links.active {
+        display: flex;
+    }
 }
 /* Make <ul> flex for links */
 .nav-links {
@@ -1125,6 +1122,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
