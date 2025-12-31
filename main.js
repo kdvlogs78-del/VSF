@@ -244,7 +244,6 @@ function rotate() {
 }
 
 rotate();
-<script>
 function toggleMenu() {
   const menu = document.getElementById("navMenu");
 
@@ -254,5 +253,5 @@ function toggleMenu() {
     menu.style.display = "flex";
   }
 }
-</script>
+
 
