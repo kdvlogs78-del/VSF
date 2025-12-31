@@ -89,7 +89,7 @@ nav a:hover::after {
   font-size: 28px;
   cursor: pointer;
 }.hamburger {
-    display:block;
+    display:flex;
      /* SHOW ☰ */
   }
 
@@ -1125,6 +1125,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
