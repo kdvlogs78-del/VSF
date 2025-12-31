@@ -85,7 +85,7 @@ nav a:hover::after {
   
     /* ☰ Icon */
 .hamburger {
-  display: none;
+  display: block;
   font-size: 28px;
   cursor: pointer;
 }.hamburger {
@@ -1124,5 +1124,6 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
