@@ -80,16 +80,15 @@ nav a:hover {
 nav a:hover::after {
     width: 100%;
 }
-/* ☰ Icon */
+/* Mobile View */
+@media (max-width: 768px) {
+  
+    /* ☰ Icon */
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-  .hamburger {
+}.hamburger {
     display: block; /* SHOW ☰ */
   }
 
@@ -1125,3 +1124,4 @@ button {
     transform: translateY(-40px);
 
 }
+
