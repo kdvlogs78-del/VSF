@@ -80,65 +80,34 @@ nav a:hover {
 nav a:hover::after {
     width: 100%;
 }
- /* ================= HAMBURGER ================= */
-        .hamburger {
-            display: none;
-            width: 30px;
-            height: 22px;
-            cursor: pointer;
-        }
+/* ☰ Icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 
-        .hamburger span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background: white;
-            margin: 5px 0;
-            transition: 0.4s;
-        }
+/* Mobile View */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* SHOW ☰ */
+  }
 
-        /* ☰ → ✕ Animation */
-        .hamburger.active span:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #6a00ff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+  }
 
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-
-        /* ================= MOBILE VIEW ================= */
-        @media (max-width: 768px) {
-
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 65px;
-                left: 0;
-                width: 100%;
-                background: linear-gradient(135deg, #ff4ecd, #6a00ff);
-                flex-direction: column;
-                align-items: center;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.45s ease;
-            }
-
-            .nav-links.show {
-                max-height: 300px;
-            }
-
-            .nav-links li {
-                padding: 14px 0;
-            }
-        }
-
+  .nav-links li {
+    padding: 15px 0;
+  }
+}
 /* Make <ul> flex for links */
 .nav-links {
     display: flex;
@@ -1155,6 +1124,3 @@ button {
     opacity: 0;
     transform: translateY(-40px);
 }
-
-
-
