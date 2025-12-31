@@ -85,10 +85,11 @@ nav a:hover::after {
   
     /* ☰ Icon */
 .hamburger {
-  display: block;
+  display: flex;
   font-size: 28px;
   cursor: pointer;
 }.hamburger {
+    display:block;
      /* SHOW ☰ */
   }
 
@@ -1124,6 +1125,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
