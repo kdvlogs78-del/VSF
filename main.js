@@ -232,16 +232,18 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
+  const header = document.getElementById("header");
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
 
-const arrow = document.getElementById("arrow");
+        // Header blur on scroll
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("scrolled", window.scrollY > 80);
+        });
 
-let angle = 0;
-
-function rotate() {
-    angle += 1;               // speed (increase = faster)
-    arrow.style.transform = `rotate(${angle}deg)`;
-    requestAnimationFrame(rotate);
-}
-
-rotate();
+        // Hamburger toggle
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        });
 
