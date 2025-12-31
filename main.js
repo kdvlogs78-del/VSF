@@ -245,7 +245,13 @@ function rotate() {
 
 rotate();
 function toggleMenu() {
-  const menu = document.getElementById("navMenu");
+    const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
 
   if (menu.style.display === "flex") {
     menu.style.display = "flex";
@@ -253,6 +259,7 @@ function toggleMenu() {
     menu.style.display = "flex";
   }
 }
+
 
 
 
