@@ -232,18 +232,16 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
-  const header = document.getElementById("header");
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("navLinks");
+      function toggleMenu() {
+            const menu = document.getElementById("navMenu");
+            const btn = document.getElementById("menuBtn");
 
-        // Header blur on scroll
-        window.addEventListener("scroll", () => {
-            header.classList.toggle("scrolled", window.scrollY > 80);
-        });
+            menu.classList.toggle("show");
 
-        // Hamburger toggle
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            hamburger.classList.toggle("active");
-        });
+            if (menu.classList.contains("show")) {
+                btn.innerHTML = "❌";
+            } else {
+                btn.innerHTML = "☰";
+            }
+        }
 
