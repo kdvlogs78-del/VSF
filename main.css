@@ -295,10 +295,12 @@ nav a {
     /* Navbar adjustments */
     .navbar {
         padding: 12px 16px;
+        justify-content: space-between;
     }
     
     .logo {
         font-size: 22px;
+         order: 1; /* Keep logo first */
     }
     
     /* Hero section */
@@ -1315,6 +1317,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
