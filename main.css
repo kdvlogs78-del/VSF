@@ -87,7 +87,7 @@ nav a {
     font-weight: 600;
     color: #ffffff;
     position: relative;
-    margin-left: 0;
+    margin-left: 22px;
 }
 
 nav a::after {
@@ -1276,6 +1276,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
