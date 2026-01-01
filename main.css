@@ -359,8 +359,13 @@ nav a {
     }
     
     .hero-content h2 {
-        font-size: 18px;
-    }
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
+    text-align: left;
+}
     
     .hero-content p {
         font-size: 16px;
@@ -381,6 +386,7 @@ nav a {
         font-size: 32px;
         margin-bottom: 40px;
     }
+
     
     /* Grids */
     .stats-grid {
@@ -1356,5 +1362,6 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
