@@ -1,6 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ===============================
+       MOBILE MENU TOGGLE - ADD THIS FIRST
+    =============================== */
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    if (menuToggle && navLinks) {
+        // Toggle menu on hamburger click
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            navLinks.classList.toggle("active");
+            document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "";
+        });
+
+        // Close menu when clicking on a link
+        navItems.forEach(item => {
+            item.addEventListener("click", () => {
+                menuToggle.classList.remove("active");
+                navLinks.classList.remove("active");
+                document.body.style.overflow = "";
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove("active");
+                navLinks.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+        });
+    }
+    /* ===============================
        ROLE SELECTION
     =============================== */
     const roles = document.querySelectorAll(".role");
@@ -244,5 +277,6 @@ revealOnScroll();
                 btn.innerHTML = "☰";
             }
         }
+
 
 
