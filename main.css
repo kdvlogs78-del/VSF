@@ -80,67 +80,53 @@ nav a:hover {
 nav a:hover::after {
     width: 100%;
 }
-/* ================= HAMBURGER ================= */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
+  /* Menu */
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-menu a:hover {
+            color: #00c3ff;
+        }
+
+        /* Toggle Button */
+        .menu-toggle {
+            font-size: 28px;
             cursor: pointer;
-            z-index: 200;
-            padding: 10px;
-            border-radius: 10px;
-            transition: 0.3s;
+            display: none;
+            user-select: none;
         }
 
-        .hamburger span {
-            width: 28px;
-            height: 3px;
-            background: #fff;
-            border-radius: 3px;
-            transition: 0.4s ease;
-        }
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
 
-        /* Hover glow */
-        .hamburger:hover {
-            transform: scale(1.08);
-            box-shadow: 0 0 20px rgba(255, 78, 205, 0.7);
-        }
+            .nav-menu {
+                position: absolute;
+                top: 65px;
+                right: 0;
+                background: #111;
+                flex-direction: column;
+                width: 200px;
+                padding: 15px;
+                display: none;
+            }
 
-        /* Animate to X */
-        .hamburger.active span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-
-        /* ================= MOBILE NAV ================= */
-        @media (max-width: 900px) {
-            .hamburger {
+            .nav-menu.show {
                 display: flex;
             }
 
-            nav ul {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                width: 260px;
-                height: calc(100vh - 70px);
-                background: rgba(0, 0, 0, 0.85);
-                backdrop-filter: blur(14px);
-                flex-direction: column;
-                padding: 30px;
-                gap: 20px;
-                transition: 0.4s ease;
-            }
-
-            nav ul.active {
-                right: 0;
+            .nav-menu a {
+                padding: 10px 0;
             }
         }
 
@@ -1161,5 +1147,6 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
