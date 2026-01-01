@@ -133,11 +133,19 @@ nav a:hover::after {
     padding: 0;
 }
 
-.nav-links li {
-    position: relative;
-    /* Needed for dropdown */
+.nav-links {
+    align-items: center; /* ADD THIS */
 }
 
+.nav-links li {
+    display: flex; /* ADD THIS */
+    align-items: center; /* ADD THIS */
+}
+
+nav a {
+    line-height: 1; /* ADD THIS */
+    padding: 8px 0; /* ADD THIS */
+}
 /* Dropdown */
 .dropdown {
     position: relative;
@@ -1305,6 +1313,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
