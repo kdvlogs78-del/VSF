@@ -214,6 +214,8 @@ nav a {
     /* Show hamburger menu */
     .menu-toggle {
         display: flex;
+         order: 2; /* Move toggle to the end */
+        margin-left: auto;
     }
     
     /* Mobile Navigation */
@@ -1313,6 +1315,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
