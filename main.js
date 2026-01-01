@@ -233,7 +233,7 @@ window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
       function toggleMenu() {
-            const menu = document.getElementById("navMenu");
+            const menu = document.getElementById("nav-links");
             const btn = document.getElementById("menuBtn");
 
             menu.classList.toggle("show");
@@ -244,4 +244,5 @@ revealOnScroll();
                 btn.innerHTML = "☰";
             }
         }
+
 
