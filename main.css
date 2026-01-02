@@ -475,6 +475,11 @@ nav a {
     object-fit: cover;
     z-index: 0;
 }
+/* Hide both by default */
+.desktop-video,
+.mobile-video {
+    display: none;
+}
 
 /* ===============================================
    MOBILE VIDEO ADJUSTMENTS
@@ -1407,6 +1412,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
