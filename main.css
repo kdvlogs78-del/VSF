@@ -466,8 +466,7 @@ nav a {
 =============================================== */
 
 /* Base video styles - Desktop */
-.bg-video desktop {
-    display: absolute;
+.bg-video.desktop-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -1408,6 +1407,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
