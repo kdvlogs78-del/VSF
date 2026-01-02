@@ -475,6 +475,15 @@ nav a {
     object-fit: cover;
     z-index: 0;
 }
+/* Desktop video - VISIBLE on desktop, HIDDEN on mobile */
+.desktop-video {
+    display: block; /* Show on desktop */
+}
+
+/* Mobile video - HIDDEN on desktop, VISIBLE on mobile */
+.mobile-video {
+    display: none; /* Hide on desktop */
+}
 /* Hide both by default */
 .desktop-video,
 .mobile-video {
@@ -1412,6 +1421,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
