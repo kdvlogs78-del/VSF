@@ -486,7 +486,7 @@ nav a {
 =============================================== */
 .mobile-video { display: none; }
 
-@media (max-width: 768px) {
+@media (max-width: 100px) {
     .desktop-video { display: none; }
     .mobile-video { display: block; }
 }
@@ -1412,6 +1412,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
