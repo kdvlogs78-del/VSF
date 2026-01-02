@@ -215,7 +215,7 @@ nav a:hover::after {
     z-index: 1;
 }
 
-/* 🔮 Glass box */
+/* Glass box */
 .bg-box {
     position: absolute;
     width: 90%;
@@ -230,10 +230,10 @@ nav a:hover::after {
     z-index: 1;
 }
 
-/* ✨ Content layer */
+/* Content layer */
 .hero-content {
     position: relative;
-        max-width: 100%;
+    max-width: 100%;
     padding: 0 20px;
     z-index: 2;
     color: white;
@@ -245,7 +245,7 @@ nav a:hover::after {
     margin-bottom: 12px;
 }
 
- .hero-content h2 {
+.hero-content h2 {
     background: none;
     -webkit-background-clip: initial;
     background-clip: initial;
@@ -253,19 +253,19 @@ nav a:hover::after {
     color: #ffffff;
     text-align: left;
     font-size: 21px;
-     margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .hero-content p {
     font-size: 14px;
-    opacity: 1.5;
+    opacity: 1;
     text-align: left;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 16px;
-    padding: 10px 24px;
+    margin-top: 20px;
+    padding: 12px 30px;
     background: linear-gradient(45deg, #ff4ecd, #8f00ff);
     color: white;
     text-decoration: none;
@@ -273,43 +273,11 @@ nav a:hover::after {
     font-weight: 600;
 }
 
-
 .hero-box p {
     font-size: 20px;
     margin: 20px 0 30px;
 }
-/* Extra small phones */
-@media (max-width: 480px) {
-    .bg-box {
-        width: 85%;
-        height: 200px;
-    }
-    
-    .hero-content h1 {
-        font-size: 24px;
-    }
-    
-    .hero-content h2 {
-        font-size: 18px;
-    }
-    
-    .hero-content p {
-        font-size: 14px;
-    }
-}
 
-/* Landscape orientation fix for mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-    .hero {
-        height: auto;
-        min-height: 100vh;
-        padding: 80px 20px 40px;
-    }
-    
-    .bg-box {
-        height: 180px;
-    }
-}
 .hero-box a {
     display: inline-block;
     padding: 16px 40px;
@@ -325,7 +293,6 @@ nav a:hover::after {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
     }
-
     70% {
         box-shadow: 0 0 0 28px rgba(255, 255, 255, 0);
     }
@@ -1116,8 +1083,24 @@ button {
         justify-content: center;
     }
     
+    /* SHOW glass box on mobile - centered and sized properly */
     .bg-box {
-        display: none;
+        display: block !important;
+        position: absolute;
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        min-height: 280px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        z-index: 1;
     }
     
     .hero-content {
@@ -1125,36 +1108,41 @@ button {
         z-index: 2;
         width: 100%;
         max-width: 100%;
-        padding: 20px;
+        padding: 0;
         text-align: center;
     }
     
     .hero-content h1 {
-        font-size: 28px;
-        margin-bottom: 15px;
+        font-size: 24px;
+        margin-bottom: 12px;
         color: #ffffff;
+        text-align: center;
     }
     
     .hero-content h2 {
         font-size: 20px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         background: none;
         -webkit-background-clip: initial;
         background-clip: initial;
         -webkit-text-fill-color: #ffffff;
         color: #ffffff;
+        text-align: center;
     }
     
     .hero-content p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.6;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         color: #ffffff;
+        opacity: 1;
+        text-align: center;
     }
     
     .btn {
-        padding: 12px 30px;
-        font-size: 16px;
+        padding: 10px 24px;
+        font-size: 15px;
+        margin-top: 8px;
     }
     
     /* SECTIONS */
@@ -1255,8 +1243,16 @@ button {
         width: 85%;
     }
     
+    /* Glass box adjustment for small phones */
+    .bg-box {
+        width: 85%;
+        max-width: 340px;
+        min-height: 300px;
+        padding: 20px;
+    }
+    
     .hero-content h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .hero-content h2 {
@@ -1264,6 +1260,11 @@ button {
     }
     
     .hero-content p {
+        font-size: 13px;
+    }
+    
+    .btn {
+        padding: 10px 22px;
         font-size: 14px;
     }
     
@@ -1271,5 +1272,4 @@ button {
         grid-template-columns: 1fr;
     }
 }
-
 
