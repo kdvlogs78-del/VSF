@@ -461,7 +461,7 @@ nav a {
 
 /* 🎥 Video layer */
 /* 🎥 Video layer */
-.bg-video {
+.bg-video desktop{
     position: absolute;
     top: 0;
     left: 0;
@@ -1418,6 +1418,7 @@ button {
     transform: translateY(-40px);
 
 }
+
 
 
 
