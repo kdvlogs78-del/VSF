@@ -1242,6 +1242,13 @@ button {
     .nav-links {
         width: 85%;
     }
+    .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(106, 0, 255, 0.6),
+            rgba(255, 78, 205, 0.6));
+    z-index: 1;
+}
     
     /* Glass box adjustment for small phones */
     .bg-box {
@@ -1272,4 +1279,6 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
+
 
